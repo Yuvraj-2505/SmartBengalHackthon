@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Rescue Mission</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            /* background-image: url(https://aashritha.org/wp-content/uploads/2024/05/Untitled-design-17.png); */
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            /* padding: 20px 0; */
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400'); */
+            /* background-image: url(https://t4.ftcdn.net/jpg/03/71/93/73/360_F_371937352_LIOq2Aa6eIpmiUFdcdACwl2gcD3ft3z5.jpg); */
+            /* background-image: url(https://aashritha.org/wp-content/uploads/2024/05/Untitled-design-17.png); */
+            /* background-image: url(https://t3.ftcdn.net/jpg/07/66/25/36/360_F_766253638_6XA81AK34KOUHHTo06WFJOIgeLJRf1kM.jpg); */
+            background-image: url(https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0 30%;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Donation Form */
+        .donation-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .donation-form h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .amount-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .amount-btn {
+            flex: 1 0 calc(33.333% - 10px);
+            min-width: 100px;
+            padding: 12px;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .amount-btn:hover, .amount-btn.active {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .custom-amount {
+            display: flex;
+            align-items: center;
+        }
+        
+        .custom-amount span {
+            margin-right: 10px;
+        }
+        
+        .donate-btn {
+            width: 100%;
+            padding: 15px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .donate-btn:hover {
+            background: #c0392b;
+        }
+        
+        /* Impact Section */
+        .impact-section {
+            background: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .impact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .stat {
+            flex: 1;
+            min-width: 150px;
+            margin: 10px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+/*         
+        /* Responsive Adjustments */
+        /* @media (max-width: 768px) {
+            .amount-btn {
+                flex: 1 0 calc(50% - 10px);
+            }
+            
+            .stat {
+                min-width: 120px;
+            }
+        } */
+        
+        /* @media (max-width: 480px) {
+            .amount-btn {
+                flex: 1 0 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        } */ */
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <div class="container">
+            <div class="logo">Rescue Hope</div>
+            <div class="tagline">Saving lives, one donation at a time</div>
+        </div>
+    </header> -->
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Your Support Makes a Difference</h1>
+            <p>Every donation helps us rescue, rehabilitate, and rehome animals in need.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="donation-section">
+            <form class="donation-form">
+                <h2>Make a Donation</h2>
+                
+                <div class="form-group">
+                    <label for="amount">Select Donation Amount</label>
+                    <div class="amount-options">
+                        <button type="button" class="amount-btn">1000rs</button>
+                        <button type="button" class="amount-btn">5000rs</button>
+                        <button type="button" class="amount-btn">10000rs</button>
+                        <button type="button" class="amount-btn">15000rs</button>
+                        <button type="button" class="amount-btn">20000rs</button>
+                        <button type="button" class="amount-btn active">50000</button>
+                    </div>
+                    
+                    <div class="custom-amount">
+                        <!-- <span>$</span> -->
+                        <input type="number" id="custom-amount" placeholder="Other amount">
+                    </div>
+                </div>
+                
+                <!-- <div class="form-group">
+                    <label for="frequency">Donation Frequency</label>
+                    <select id="frequency">
+                        <option value="one-time">One-time donation</option>
+                        <option value="monthly">Monthly donation</option>
+                        <option value="quarterly">Quarterly donation</option>
+                        <option value="yearly">Yearly donation</option>
+                    </select>
+                </div> -->
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="card">Payment Information</label>
+                    <input type="text" id="card" placeholder="Card number" required>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <input type="text" placeholder="MM/YY" style="flex: 1;" required>
+                        <input type="text" placeholder="CVV" style="flex: 1;" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="donate-btn">Donate Now</button>
+            </form>
+        </section>
+        
+        <section class="impact-section">
+            <h2>Your Impact</h2>
+            <div class="impact-stats">
+                <div class="stat">
+                    <div class="stat-number">1,250+</div>
+                    <div class="stat-label">Animals Rescued</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Families Reunited</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Adoption Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Rescue Hotline</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Rescue Hope. All rights reserved.</p>
+            <p>Your donations are tax-deductible as allowed by law.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Amount button selection
+            const amountButtons = document.querySelectorAll('.amount-btn');
+            const customAmount = document.getElementById('custom-amount');
+            
+            amountButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    amountButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    // Clear custom amount field
+                    customAmount.value = '';
+                });
+            });
+            
+            // When custom amount is focused, deselect amount buttons
+            customAmount.addEventListener('focus', function() {
+                amountButtons.forEach(btn => btn.classList.remove('active'));
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
